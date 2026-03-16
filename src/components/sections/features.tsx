@@ -4,6 +4,7 @@ import Container from "../layout/container";
 import FeatureCard from "../ui/feature-card";
 import { Zap, Workflow, Shield, Plug, BarChart, Bot } from "lucide-react";
 import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
 
 const containerVariants = {
   hidden: {},
@@ -14,7 +15,7 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: {
     opacity: 0,
     y: 40,
@@ -24,7 +25,7 @@ const itemVariants = {
     y: 0,
     transition: {
       duration: 0.5,
-      ease: "easeOut",
+      ease: [0.25, 0.1, 0.25, 1],
     },
   },
 };
