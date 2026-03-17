@@ -14,8 +14,8 @@ export function FakePreview() {
       className="
         relative
         rounded-2xl
-        border border-white/10
-        bg-zinc-900/70
+        bg-surface-elevated
+        border border-border-soft
         backdrop-blur-xl
         p-6
         shadow-2xl
@@ -38,7 +38,7 @@ function Header() {
   return (
     <div className="flex items-center justify-between">
       <div>
-        <p className="text-sm text-zinc-400">Automation Workspace</p>
+        <p className="text-sm font-medium text-text-primary">Automation Workspace</p>
         <h3 className="text-lg font-semibold">
           Workflow Analysis
         </h3>

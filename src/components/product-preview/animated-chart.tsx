@@ -57,7 +57,8 @@ export default function AnimatedChart() {
               y="65"
               textAnchor="middle"
               fontSize="9"
-              fill="rgba(255,255,255,0.6)"
+              fill="currentColor"
+              className="text-text-secondary"
             >
               {node.label}
             </text>

@@ -19,7 +19,7 @@ export function ActivityLog() {
           initial={{ opacity: 0, x: -10 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: i * 0.7 }}
-          className="text-sm text-zinc-400"
+          className="text-xs text-text-secondary"
         >
           {step}
         </motion.p>

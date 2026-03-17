@@ -132,8 +132,8 @@ export default function GlowCard({ children }: GlowCardProps) {
         onMouseLeave={handleLeave}
         className="
           relative h-full rounded-2xl
-          border border-white/10
-          bg-neutral-900/70
+          bg-surface
+          border-border-soft
           backdrop-blur-xl
           p-8
           overflow-hidden

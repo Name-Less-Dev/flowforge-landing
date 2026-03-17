@@ -47,34 +47,44 @@ export default function Testimonials() {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.15 }}
-              whileHover={{ y: -6 }}
+              transition={{
+                delay: index * 0.12,
+                duration: 0.45,
+                ease: "easeOut",
+              }}
+              whileHover={{
+                y: -10,
+                scale: 1.02,
+              }}
               className="
                 group
                 relative
-                p-6
+                p-7
                 rounded-2xl
                 border border-black/10 dark:border-white/10
                 bg-white/60 dark:bg-white/5
                 backdrop-blur
-                transition
                 shadow-sm
                 hover:shadow-xl
+                will-change-transform
               "
             >
               {/* Glow hover */}
-              <div className="
-                absolute inset-0 rounded-2xl
-                opacity-0 group-hover:opacity-100
-                transition
-                bg-gradient-to-br
-                from-brand/10
-                via-transparent
-                to-transparent
-                pointer-events-none
-              "/>
+              <motion.div
+                className="
+                  absolute inset-0 rounded-2xl
+                  pointer-events-none
+                  bg-gradient-to-br
+                  from-brand/12
+                  via-transparent
+                  to-transparent
+                "
+                initial={{ opacity: 0 }}
+                whileHover={{ opacity: 1 }}
+                transition={{ duration: 0.25 }}
+              />
 
-              <p className="text-foreground/80 relative">
+              <p className="text-foreground/80 relative leading-relaxed">
                 “{testimonial.text}”
               </p>
 
