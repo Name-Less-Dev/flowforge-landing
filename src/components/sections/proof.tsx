@@ -52,7 +52,9 @@ function Stat({ value, label, suffix = "" }: StatProps) {
 
 export default function Proof() {
   return (
-    <section className="py-24 border-y border-black/5 dark:border-white/10">
+    <section 
+    id="proof"
+    className="py-24 border-y border-black/5 dark:border-white/10">
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Heading */}

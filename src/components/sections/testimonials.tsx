@@ -25,7 +25,9 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-24">
+    <section 
+    id="testimonials"
+    className="py-24">
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Header */}

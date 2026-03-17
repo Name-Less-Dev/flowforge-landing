@@ -4,7 +4,9 @@ import { motion } from "framer-motion";
 
 export default function CTA() {
   return (
-    <section className="relative py-32 overflow-hidden">
+    <section 
+    id="cta"
+    className="relative py-32 overflow-hidden">
 
       {/* Background glow */}
       <div className="absolute inset-20 -z-10 pointer-events-none flex justify-center">

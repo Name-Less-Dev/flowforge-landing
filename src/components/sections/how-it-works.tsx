@@ -22,7 +22,9 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section 
+    id="how-it-works"
+    className="relative py-24 overflow-hidden">
         <div
         className="
             pointer-events-none

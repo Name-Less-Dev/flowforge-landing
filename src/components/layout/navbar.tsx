@@ -18,29 +18,56 @@ export default function Navbar() {
     >
       <Container>
         <div className="flex h-16 items-center justify-between">
-          
+
           {/* Logo */}
-          <span className="font-semibold text-lg">
+          <a
+            href="#"
+            className="font-semibold text-lg tracking-tight hover:opacity-80 transition"
+          >
             FlowForge
-          </span>
+          </a>
 
           {/* Links */}
-          <nav className="hidden md:flex gap-8 text-sm">
+          <nav className="hidden md:flex gap-8 text-sm font-medium">
+
             <a href="#features" className="hover:text-brand transition">
-              Features
+              Recursos
             </a>
+
+            <a href="#how-it-works" className="hover:text-brand transition">
+              Como funciona
+            </a>
+
+            <a href="#proof" className="hover:text-brand transition">
+              Resultados
+            </a>
+
             <a href="#pricing" className="hover:text-brand transition">
-              Pricing
+              Preços
             </a>
-            <a href="#contact" className="hover:text-brand transition">
-              Contact
+
+            <a href="#testimonials" className="hover:text-brand transition">
+              Depoimentos
             </a>
+
           </nav>
 
           {/* CTA */}
-          <button className="bg-brand text-brand-foreground px-4 py-2 rounded-lg hover:opacity-90 transition">
-            Get Started
-          </button>
+          <a
+            href="#cta"
+            className="
+              bg-brand
+              text-brand-foreground
+              px-4 py-2
+              rounded-lg
+              hover:opacity-90
+              transition
+              font-medium
+            "
+          >
+            Começar
+          </a>
+
         </div>
       </Container>
     </motion.header>
