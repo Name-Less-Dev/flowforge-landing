@@ -78,3 +78,7 @@ body {
     border-color 0.35s ease,
     fill 0.35s ease;
 }
+
+html {
+  scroll-behavior: smooth;
+}

@@ -2,8 +2,41 @@
 
 import Container from "./container";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+
+const links = [
+  { id: "features", label: "Recursos" },
+  { id: "how-it-works", label: "Como funciona" },
+  { id: "proof", label: "Resultados" },
+  { id: "pricing", label: "Preços" },
+  { id: "testimonials", label: "Depoimentos" },
+];
 
 export default function Navbar() {
+  const [active, setActive] = useState("");
+
+  useEffect(() => {
+    const sections = document.querySelectorAll("section[id]");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActive(entry.target.id);
+          }
+        });
+      },
+      {
+        rootMargin: "-45% 0px -45% 0px",
+        threshold: 0,
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <motion.header
       initial={{ y: -80 }}
@@ -29,27 +62,30 @@ export default function Navbar() {
 
           {/* Links */}
           <nav className="hidden md:flex gap-8 text-sm font-medium">
+            {links.map((link) => (
+              <a
+                key={link.id}
+                href={`#${link.id}`}
+                className={`
+                  relative transition
+                  ${
+                    active === link.id
+                      ? "text-brand"
+                      : "hover:text-brand"
+                  }
+                `}
+              >
+                {link.label}
 
-            <a href="#features" className="hover:text-brand transition">
-              Recursos
-            </a>
-
-            <a href="#how-it-works" className="hover:text-brand transition">
-              Como funciona
-            </a>
-
-            <a href="#proof" className="hover:text-brand transition">
-              Resultados
-            </a>
-
-            <a href="#pricing" className="hover:text-brand transition">
-              Preços
-            </a>
-
-            <a href="#testimonials" className="hover:text-brand transition">
-              Depoimentos
-            </a>
-
+                {/* underline animado */}
+                {active === link.id && (
+                  <motion.span
+                    layoutId="navbar-underline"
+                    className="absolute -bottom-1 left-0 right-0 h-[2px] bg-brand rounded-full"
+                  />
+                )}
+              </a>
+            ))}
           </nav>
 
           {/* CTA */}
