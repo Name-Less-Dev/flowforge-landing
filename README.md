@@ -1,36 +1,119 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 FlowForge — Landing Page SaaS Moderna
 
-## Getting Started
+Landing page inspirada em produtos SaaS modernos, desenvolvida como estudo prático de arquitetura front-end e experiência de usuário.
 
-First, run the development server:
+O projeto simula decisões reais de produto, com foco em **estrutura escalável**, **consistência visual entre temas** e **interfaces performáticas**.
+
+---
+
+## 🌐 Preview
+
+| Desktop | Dark Mode | features |
+|---|---|---|
+ ![Preview Hero](public/preview-hero.png) | ![Preview Dark Mode](public/preview-darkmode.png) | ![Preview Mobile](public/preview-features.png)
+
+---
+
+## 🧱 Stack Utilizada
+
+- **Next.js (App Router)**
+- **React + TypeScript**
+- **Tailwind CSS**
+- **Framer Motion**
+- **SVG Animations**
+- **Vercel (Deploy & CI)**
+
+---
+
+## ✨ Funcionalidades
+
+- Landing page completa estilo SaaS
+- Navegação suave entre seções
+- Navbar fixa com efeito backdrop blur
+- Dark Mode com Theme Switcher
+- Layout totalmente responsivo
+- Animações otimizadas para performance
+- Charts animados em SVG
+- Componentes reutilizáveis
+- Deploy em ambiente real
+
+---
+
+## 🧠 Principais Aprendizados
+
+### Técnicos
+- Gerenciamento de tema global sem re-renders desnecessários
+- Estruturação de componentes orientada à intenção
+- Scroll navigation com layout fixo
+- Implementação de animações progressivas
+- Debugging e ajustes pós-deploy na Vercel
+
+### Produto & Engenharia
+- UI não termina quando “funciona”
+- Iteração melhora significativamente a qualidade percebida
+- Pensar como produto influencia decisões técnicas
+
+---
+
+## ⚙️ Executando Localmente
 
 ```bash
+git clone https://github.com/seu-usuario/flowforge-landing.git
+cd flowforge-landing
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Acesse:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🚀 Deploy
 
-To learn more about Next.js, take a look at the following resources:
+👉 https://flowforge-hazel.vercel.app
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🧩 Engineering Notes
 
-## Deploy on Vercel
+Pequenas decisões técnicas tomadas durante o desenvolvimento:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Dark Mode como estado global**  
+Evita múltiplas fontes de verdade e inconsistências visuais.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Componentização por intenção**  
+Componentes representam seções da experiência, não apenas blocos visuais.
+
+**Animações progressivas**  
+Implementadas após estabilizar o layout para reduzir retrabalho.
+
+**Design adaptado por tema**  
+Ajustes manuais garantem melhor hierarquia visual entre light e dark mode.
+
+---
+
+## 🔭 Próximos Passos
+
+- Melhorias de acessibilidade (ARIA)
+- Otimização Lighthouse / Core Web Vitals
+- Testes básicos de componentes
+- Integração com backend mockado
+
+---
+
+## 👨‍💻 Sobre Mim
+
+Desenvolvedor Front-End em evolução contínua, focado em aprender através da construção de projetos próximos a cenários reais de produto.
+
+Interesse especial em **UI Engineering**, performance e arquitetura front-end moderna.
+
+🔗 LinkedIn:  
+https://www.linkedin.com/in/matheus-araujo-bezerra/
+
+---
+
+## 📌 Observação
+
+Projeto fictício criado para fins educacionais e prática de desenvolvimento front-end.
